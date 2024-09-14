@@ -84,7 +84,8 @@ const datos = {
     ]
   }
 
-const productsTitle = document.querySelector("h1")
+const createCards = document.addEventListener("DOMContentLoaded", () => {
+    const productsTitle = document.querySelector("h1")
 const productsContainer = document.querySelector(".products-container")
 productsTitle.textContent = "Autos 2024"
 
@@ -106,9 +107,16 @@ for(let i=1; i < datos.cars.length ; i++){
        <li class="list-group-item"><strong>Type: </strong>${datos.cars[i].type} </li>
        <li class="list-group-item"><strong>Color: </strong>${datos.cars[i].color} </li>
      </ul>
+     <div class="mt-3 align-items-center d-flex justify-content-center">
+        <a href="#" class="btn btn-primary">Read more</a>
+     </div>
  </div>  
     
     `)
     productsCards.push(productCard);
     productsContainer.appendChild(productCard);
 }
+
+});
+
+createCards();
