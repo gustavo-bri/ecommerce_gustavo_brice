@@ -90,14 +90,14 @@ const productsContainer = document.querySelector(".products-container")
 productsTitle.textContent = "Autos 2024"
 
 let productsCards = [];
-for(let i=1; i < datos.cars.length ; i++){
+for(let i=0; i < datos.cars.length ; i++){
     let productCard = document.createElement("div");
     productCard.classList.add("product-card", "m-3");
     productCard.insertAdjacentHTML("beforeend", `
     <div class="card p-3" style="width: 18rem;" >
     <h2 class="card-title text-center mb-3">${datos.cars[i].make}</h2>
     <div class="mb-3" style="width: 250px; height: 150px;">
-        <img class="card-img-top  img-fluid w-100 h-100 object-fit-cover" src="https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/${i}.jpg" alt="product">
+        <img class="card-img-top  img-fluid w-100 h-100 object-fit-cover" src="https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/${i+1}.jpg" alt="product">
     </div>
     <h3 class="card-subtitle mb-2 text-body-secondary text-center">${datos.cars[i].model}</h3>
     <p class="card-text"></p>
